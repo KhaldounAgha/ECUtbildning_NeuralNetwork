@@ -19,21 +19,21 @@ python
 Copy
 import numpy as np
 
-# L1 Normalization
+## L1 Normalization
 X_Normalized_L1 = X / np.sum(np.abs(X))
 
-# L2 Normalization
+## L2 Normalization
 X_Normalized_L2 = X / np.sqrt(np.sum((X)**2))
 
-# Log Transformation
+## Log Transformation
 X_Log1_Transformed = np.log1p(X)
 Data Cleaning
 python
 Copy
-# Initialize the DataCleaner with the directory containing your data
+## Initialize the DataCleaner with the directory containing your data
 cleaner = DataCleaner(dir=r"path_to_your_directory")
 
-# Perform data cleaning steps
+## Perform data cleaning steps
   cleaner.directory_path()
   cleaner.logging_path()
   cleaner.configure_logging()
@@ -49,7 +49,7 @@ cleaner = DataCleaner(dir=r"path_to_your_directory")
   cleaner.clean_date()
   cleaner.process_date_column()
 
-# Save the cleaned data to a CSV file
+## Save the cleaned data to a CSV file
 output_dir = r"path_to_output_directory"
 output_file = "cleaned_students_performance.csv"
 output_path = os.path.join(output_dir, output_file)
